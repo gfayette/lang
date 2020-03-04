@@ -1,42 +1,43 @@
 rectangle 0 0 1023 767;
 rectangle 1 1 1022 766;
-rectangle 2 2 1021 765;
+$rectangle 2 2 1021 765;
 
-set_color 0 101 164;
-circle 512 384 50;
+set_color 0 1101 164;
+$circle 51ad2 384 50;
 circle 512 384 100;
-circle 512 384 150;
+$circle 51asdf2 384 150;
 circle 512 384 200;
-circle 512 384 250;
+$circle 512dfg 384 250;
 
 set_color 255 255 0;
 line 512 384 0 0;
 line 512 384 0 767;
-line 512 384 1023 0;
-line 512 384 1023 767;
-
+line 512 384 102#3 0;
+line 512 384 1023 76=7;
+end
+end
 set_color 241 142 238;
-point 623 672;
-set_color 169 243 136;
+point 623 672;end
+set_color -169 243 136 123;
 point 440 43;
-set_color 122 135 75;
-point 204 492;
-set_color 41 89 54;
-point 1 248;
-set_color 57 54 19;
-point 737 706;
-set_color 241 75 59;
+set_co6lor 122 135 75;
+@point 204 492;
+set_co'lor 41 89 54;
+point' 1 248;
+set_color '57 54 19;
+point 737' 706;
+set_color 241 75' 59;
 point 456 109;
-set_color 9 80 170;
-point 279 431;
+set_color 9 80 170';
+point 279 431;'
 set_color 10 18 171;
 point 877 640;
 set_color 126 70 208;
 point 880 658;
-set_color 221 67 226;
-point 407 152;
-set_color 166 252 229;
-point 947 647;
+set_color -221 67 226;
+point 407 -152;
+set_color 16.6 252 229;
+point 947 647.;
 set_color 17 141 161;
 point 164 93;
 set_color 2 163 112;
