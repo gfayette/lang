@@ -25,13 +25,8 @@
 
 %%
 
-draw_prog:	drawing
-		{ printf("drawing program\n"); }
-;
-
-drawing:	draw_stmt
-		|	drawing draw_stmt 
-		{ printf("drawing\n"); }
+draw_prog:	draw_stmt
+		|	draw_prog draw_stmt 
 ;
 
 draw_stmt:	line
@@ -39,35 +34,32 @@ draw_stmt:	line
 		|	circle
 		|	rectangle
 		|	set_color			
-		{ printf("stmt\n"); }
 ;
 
 line:	LINE INT INT INT INT END_STATEMENT
-		{ printf("line\n"); }
+		{ line($2, $3, $4, $5); }
 ;
 
 point:	POINT INT INT END_STATEMENT
-		{ printf("point\n"); point($2, $3); }
+		{ point($2, $3); }
 ;
 
 circle:	CIRCLE INT INT INT END_STATEMENT
-		{ printf("circle\n"); }
+		{ circle($2, $3, $4); }
 ;
 
 rectangle:	RECTANGLE INT INT INT INT END_STATEMENT
-		{ printf("rectangle\n"); }
+		{ rectangle($2, $3, $4, $5); }
 ;
 
 set_color:	SET_COLOR INT INT INT END_STATEMENT
-		{ printf("color\n"); }
+		{ set_color($2, $3, $4); }
 %%
 
 int main(int argc, char** argv){
-	printf("setup\n");
 	setup();
 	yyparse();
 	finish();
-	printf("finish\n");
 	return 0;
 }
 
