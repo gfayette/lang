@@ -7,16 +7,15 @@
 
 %%
 
-[-+]?[0-9]*\.[0-9]+	{ yylval.f = atof(yytext); return FLOAT; }
-[+-]?[0-9]+		{ yylval.i = atoi(yytext); return INT; }
-end			{ return END; }
-point			{ return POINT; }
-line			{ return LINE; }
-circle			{ return CIRCLE; }
-rectangle		{ return RECTANGLE; }
-set_color		{ return SET_COLOR; }
-;			{ return END_STATEMENT; }
-[ \t\n]			;
-.			{ return yytext[0]; }
+[-+]?[0-9]*\.[0-9]+	{ yylval.f = atof(yytext); return FLOAT; }	/* Catch all floating point numbers */
+[+-]?[0-9]+		{ yylval.i = atoi(yytext); return INT; }	/* Catch all integers */
+point			{ return POINT; }				/* Catch all point tokens */
+line			{ return LINE; }				/* Catch all line tokens */
+circle			{ return CIRCLE; }				/* Catch all circle tokens */
+rectangle		{ return RECTANGLE; }				/* Catch all rectangle tokens */
+set_color		{ return SET_COLOR; }				/* Catch all set_color tokens */
+;			{ return END_STATEMENT; }			/* Catch all end_statement tokens */
+[ \t\n]			;						/* Catch all whitespace and do nothing */
+.			{ return OTHER; }				/* Catch all other characters on the stream */
 
 %%

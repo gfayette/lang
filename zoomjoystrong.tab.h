@@ -53,7 +53,8 @@ extern int yydebug;
     RECTANGLE = 263,
     SET_COLOR = 264,
     INT = 265,
-    FLOAT = 266
+    FLOAT = 266,
+    OTHER = 267
   };
 #endif
 
@@ -62,10 +63,10 @@ extern int yydebug;
 
 union YYSTYPE
 {
-#line 11 "zoomjoystrong.y" /* yacc.c:1909  */
+#line 12 "zoomjoystrong.y" /* yacc.c:1909  */
  int i; float f; 
 
-#line 69 "zoomjoystrong.tab.h" /* yacc.c:1909  */
+#line 70 "zoomjoystrong.tab.h" /* yacc.c:1909  */
 };
 
 typedef union YYSTYPE YYSTYPE;

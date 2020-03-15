@@ -14,9 +14,10 @@ line 512 384 0 0;
 line 512 384 0 767;
 line 512 384 102#3 0;
 line 512 384 1023 76=7;
-end
-end
+
+rectangle 100 100 100 100;
 set_color 241 142 238;
+rectangle 1000000000000000000000 100 100 100;
 point 623 672;end
 set_color -169 243 136 123;
 point 440 43;
@@ -8443,4 +8444,8 @@ point 90 419;
 set_color 47 136 42;
 point 1007 164;
 set_color 216 101 165;
+end
 point 216 371;
+circle 512 384 250;
+
+
