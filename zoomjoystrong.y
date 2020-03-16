@@ -1,6 +1,13 @@
+/*
+ * George Fayette
+ * CIS 343
+ * Language Creation
+ * 3-14-2020
+ * zoomjoystrong parser file
+*/
+
 %{
 	#include <stdio.h>
-	#include <limits.h>
 	#include "zoomjoystrong.h"
 	void yyerror(const char* msg);
 	int yylex();
@@ -33,7 +40,6 @@
 // The remaining grammar defines empty programs, single statement programs,
 // and multi-statement programs.
 draw_prog:	error
-		|
 		|	draw_stmt
 		|	draw_prog draw_stmt
 ;

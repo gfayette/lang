@@ -1,9 +1,19 @@
+/*
+ * George Fayette
+ * CIS 343
+ * Language Creation
+ * 3-14-2020
+ * zoomjoystrong lexer file
+*/
+
 %{
 	#include "zoomjoystrong.tab.h"
 	#include <stdlib.h>
 %}
 
 %option noyywrap
+%option nounput
+%option noinput
 
 %%
 

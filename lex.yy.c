@@ -467,11 +467,19 @@ int yy_flex_debug = 0;
 #define YY_RESTORE_YY_MORE_OFFSET
 char *yytext;
 #line 1 "zoomjoystrong.lex"
-#line 2 "zoomjoystrong.lex"
+/*
+ * George Fayette
+ * CIS 343
+ * Language Creation
+ * 3-14-2020
+ * zoomjoystrong lexer file
+*/
+#line 10 "zoomjoystrong.lex"
 	#include "zoomjoystrong.tab.h"
 	#include <stdlib.h>
-#line 474 "lex.yy.c"
-#line 475 "lex.yy.c"
+#line 481 "lex.yy.c"
+#define YY_NO_INPUT 1
+#line 483 "lex.yy.c"
 
 #define INITIAL 0
 
@@ -531,8 +539,6 @@ extern int yywrap ( void );
 #endif
 
 #ifndef YY_NO_UNPUT
-    
-    static void yyunput ( int c, char *buf_ptr  );
     
 #endif
 
@@ -688,10 +694,10 @@ YY_DECL
 		}
 
 	{
-#line 8 "zoomjoystrong.lex"
+#line 18 "zoomjoystrong.lex"
 
 
-#line 695 "lex.yy.c"
+#line 701 "lex.yy.c"
 
 	while ( /*CONSTCOND*/1 )		/* loops until end-of-file is reached */
 		{
@@ -750,61 +756,61 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
-#line 10 "zoomjoystrong.lex"
+#line 20 "zoomjoystrong.lex"
 { yylval.f = atof(yytext); return FLOAT; }	/* Catch all floating point numbers */
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 11 "zoomjoystrong.lex"
+#line 21 "zoomjoystrong.lex"
 { yylval.i = atoi(yytext); return INT; }	/* Catch all integers */
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 12 "zoomjoystrong.lex"
+#line 22 "zoomjoystrong.lex"
 { return POINT; }				/* Catch all point tokens */
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 13 "zoomjoystrong.lex"
+#line 23 "zoomjoystrong.lex"
 { return LINE; }				/* Catch all line tokens */
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
-#line 14 "zoomjoystrong.lex"
+#line 24 "zoomjoystrong.lex"
 { return CIRCLE; }				/* Catch all circle tokens */
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
-#line 15 "zoomjoystrong.lex"
+#line 25 "zoomjoystrong.lex"
 { return RECTANGLE; }				/* Catch all rectangle tokens */
 	YY_BREAK
 case 7:
 YY_RULE_SETUP
-#line 16 "zoomjoystrong.lex"
+#line 26 "zoomjoystrong.lex"
 { return SET_COLOR; }				/* Catch all set_color tokens */
 	YY_BREAK
 case 8:
 YY_RULE_SETUP
-#line 17 "zoomjoystrong.lex"
+#line 27 "zoomjoystrong.lex"
 { return END_STATEMENT; }			/* Catch all end_statement tokens */
 	YY_BREAK
 case 9:
 /* rule 9 can match eol */
 YY_RULE_SETUP
-#line 18 "zoomjoystrong.lex"
+#line 28 "zoomjoystrong.lex"
 ;						/* Catch all whitespace and do nothing */
 	YY_BREAK
 case 10:
 YY_RULE_SETUP
-#line 19 "zoomjoystrong.lex"
+#line 29 "zoomjoystrong.lex"
 { return OTHER; }				/* Catch all other characters on the stream */
 	YY_BREAK
 case 11:
 YY_RULE_SETUP
-#line 21 "zoomjoystrong.lex"
+#line 31 "zoomjoystrong.lex"
 ECHO;
 	YY_BREAK
-#line 808 "lex.yy.c"
+#line 814 "lex.yy.c"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -1139,43 +1145,6 @@ static int yy_get_next_buffer (void)
 }
 
 #ifndef YY_NO_UNPUT
-
-    static void yyunput (int c, char * yy_bp )
-{
-	char *yy_cp;
-    
-    yy_cp = (yy_c_buf_p);
-
-	/* undo effects of setting up yytext */
-	*yy_cp = (yy_hold_char);
-
-	if ( yy_cp < YY_CURRENT_BUFFER_LVALUE->yy_ch_buf + 2 )
-		{ /* need to shift things up to make room */
-		/* +2 for EOB chars. */
-		int number_to_move = (yy_n_chars) + 2;
-		char *dest = &YY_CURRENT_BUFFER_LVALUE->yy_ch_buf[
-					YY_CURRENT_BUFFER_LVALUE->yy_buf_size + 2];
-		char *source =
-				&YY_CURRENT_BUFFER_LVALUE->yy_ch_buf[number_to_move];
-
-		while ( source > YY_CURRENT_BUFFER_LVALUE->yy_ch_buf )
-			*--dest = *--source;
-
-		yy_cp += (int) (dest - source);
-		yy_bp += (int) (dest - source);
-		YY_CURRENT_BUFFER_LVALUE->yy_n_chars =
-			(yy_n_chars) = (int) YY_CURRENT_BUFFER_LVALUE->yy_buf_size;
-
-		if ( yy_cp < YY_CURRENT_BUFFER_LVALUE->yy_ch_buf + 2 )
-			YY_FATAL_ERROR( "flex scanner push-back overflow" );
-		}
-
-	*--yy_cp = (char) c;
-
-	(yytext_ptr) = yy_bp;
-	(yy_hold_char) = *yy_cp;
-	(yy_c_buf_p) = yy_cp;
-}
 
 #endif
 
@@ -1809,6 +1778,6 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 21 "zoomjoystrong.lex"
+#line 31 "zoomjoystrong.lex"
 
 
